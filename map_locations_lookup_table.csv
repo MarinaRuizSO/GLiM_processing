@@ -1,0 +1,9 @@
+﻿Coordinates,peru,argentina,turkey,alburz_south,pyrenees,massif_central,colorado,xian
+lonW,-90,-90,20,20,-14,-14,-124,85
+lonE,-30,-30,64,64,18,18,-71,134
+latS,15,15,20,20,35,35,22,24
+latN,-55,-55,56,56,56,56,49,50
+loc,upper right,lower left,upper left,lower left,lower right,upper left,upper right,upper left
+inset_axis,1.55,1.55,,,,,1.85,1.55
+lower bound,350000,265000,no bounds,,,,,
+upper bound,490000,322000,no bounds,,,,,

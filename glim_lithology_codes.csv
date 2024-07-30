@@ -1,0 +1,17 @@
+﻿Lithology,Code,Color,Number
+Unconsolidated Sediments,su,#fcda80,0
+Siliclastic Sedimentary Rocks,ss,#c79121,1
+Mixed Sedimentary Rocks,sm,#875d4f,2
+Pyroclastic,py,#5e340b,3
+Carbonate Sedimentary Rocks,sc,#1575e8,4
+Evaporites,ev,#aee439,5
+Metamorphic Rocks,mt,#7bac22,6
+Acid Plutonic Rocks,pa,#c00c36,7
+Intermediate Plutonic Rocks,pi,#880c5e,8
+Basic Plutonic Rocks,pb,#56149d,9
+Acid Volcanic Rocks,va,#fd90ac,10
+Intermediate Volcanic Rocks,vi,#ca61b5,11
+Basic Volcanic Rocks,vb,#a81cbe,12
+Ice and Glaciers,ig,#beecfe,13
+Water Bodies,wb,#35e1fc,14
+No Data,nd,#475c72,99

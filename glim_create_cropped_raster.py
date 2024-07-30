@@ -13,7 +13,7 @@ location_name = ['pyrenees']
 # load the glim database 
 glim_data_path = '/exports/csce/datastore/geos/groups/LSDTopoData/lithology/GLIM/'
 dem_path = ['/exports/csce/datastore/geos/users/s1440040/LSDTopoTools/data/ExampleTopoDatasets/ChiAnalysisData/dems_to_process/pyrenees/input_data/']
-save_path = ['./']
+save_path = './'
 glimology_df = gpd.read_file(glim_data_path + "LiMW_GIS 2015.gdb")
 
 dem_count = 0
@@ -35,10 +35,10 @@ for dem in dem_names:
     # convert the categorical values for lithology into numbers
     # otherwise we cannot use make_geocube. It only allows for numerical values
     xx_int_glim_unique = np.unique(glim_clipped.xx, return_inverse=True)
-    
+    #breakpoint()
     #need to save the lithological layer names for the legend 
     xx_int_series = pd.Series(xx_int_glim_unique[0])
-    xx_int_series.to_csv(save_path + f'{location_name}_litho_codes.csv', index=True, header=False)
+    xx_int_series.to_csv(save_path + f'{location_name[dem_count]}_litho_codes.csv', index=True, header=False)
 
     dict_glim = {'su' : 0, 'ss' : 1, 'sm' : 2, 'py' : 3,
                  'sc' : 4, 'ev' : 5, 'mt' : 6, 'pa' : 7,
@@ -51,5 +51,5 @@ for dem in dem_names:
     # rasterize the column with the lithological units
     out_grid_glim = make_geocube(vector_data=glim_clipped, measurements=["xx_int"], resolution=(-16, 16)) #for most crs negative comes first in resolution
     #save the column with the lithologies to a raster 
-    out_grid_glim["xx_int"].rio.to_raster(save_path + f"{location_name}_glim.tif")
+    out_grid_glim["xx_int"].rio.to_raster(save_path + f"{location_name[dem_count]}_glim.tif")
     dem_count+=1

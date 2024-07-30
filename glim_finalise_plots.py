@@ -3,7 +3,7 @@ import os
 import cartopy.crs as ccrs
 from matplotlib import rcParams
 
-from glim_functions import plot_glim_no_basins
+from glim_functions import plot_glim_no_basins, plot_glim_with_basins
 os.environ["HDF5_USE_FILE_LOCKING"] = "FALSE" # Keep this or the code breaks because the HDF files aren't closed properly.
 plt.rcParams['axes.labelweight'] = 'normal'
 rcParams['font.family'] = 'sans-serif'
@@ -24,5 +24,6 @@ count = 0
 for location in location_name:
     crs = ccrs.UTM(zone=crs_number_cartopy[count],southern_hemisphere=south_h)
     map_ax = plt.subplot(projection=crs)
-    plot_glim_no_basins(map_ax, 'A', dem_paths[count], dem_files[count], location, save_path, hs_raster[count])
+    #plot_glim_no_basins(map_ax, dem_paths[count], dem_files[count], location, save_path, hs_raster[count])
+    plot_glim_with_basins(map_ax, dem_paths[count], dem_files[count], location, save_path, hs_raster[count])
     count+=1

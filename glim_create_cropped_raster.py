@@ -8,12 +8,12 @@ import rasterio
 from geocube.api.core import make_geocube
 os.environ["HDF5_USE_FILE_LOCKING"] = "FALSE" # Keep this or the code breaks because the HDF files aren't closed properly.
 
-dem_names =  ['pyrenees_dem.bil']#['peru','argentina', 'turkey', 'xian','colorado','alburz_south', 'massif_central', 'pyrenees']
-location_name = ['pyrenees']
+dem_names =  ['nevada_COP30_UTM.bil']
+location_name = ['nevada']
 # load the glim database 
 glim_data_path = '/exports/csce/datastore/geos/groups/LSDTopoData/lithology/GLIM/'
-dem_path = ['/exports/csce/datastore/geos/users/s1440040/LSDTopoTools/data/ExampleTopoDatasets/ChiAnalysisData/dems_to_process/pyrenees/input_data/']
-save_path = './'
+dem_path = ['./nevada/']
+save_path = './nevada/'
 glimology_df = gpd.read_file(glim_data_path + "LiMW_GIS 2015.gdb")
 
 dem_count = 0

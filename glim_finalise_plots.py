@@ -12,12 +12,12 @@ rcParams['font.size'] = 14
 
 
 chi_with_rain = False
-dem_paths = ['/exports/csce/datastore/geos/users/s1440040/LSDTopoTools/data/ExampleTopoDatasets/ChiAnalysisData/dems_to_process/pyrenees/input_data/']
-save_path = './'
-location_name = ['pyrenees']
-dem_files = ['pyrenees_dem.bil']
-hs_raster = ['pyrenees_dem_hs.bil']
-crs_number_cartopy = ['31']
+dem_paths = ['./nevada/']#['/exports/csce/datastore/geos/users/s1440040/LSDTopoTools/data/ExampleTopoDatasets/ChiAnalysisData/dems_to_process/pyrenees/input_data/']
+save_path = './nevada/'
+location_name = ['nevada']
+dem_files = ['nevada_COP30_UTM.bil']
+hs_raster = ['nevada_COP30_UTM_hs.bil']
+crs_number_cartopy = ['11']
 south_h = False
 count = 0
 

@@ -142,7 +142,7 @@ def plot_glim_with_basins(axs, DEM_path, DEM_file, location_name, save_path, hs_
 
         dem_basins_with_rain.ExtractRiverNetwork(method = "area_threshold", area_threshold_min = 200)
 
-
+        # todo: add option to get another basin detection mechanism that doesnt involve supplying the basins
         XY_basins_with_rain = dem_basins_with_rain.DefineCatchment(method="from_XY", test_edges = False, min_area = 0,max_area = 0, X_coords = lon_transform_list, Y_coords = lat_transform_list, 
             coord_search_radius_nodes = 30, coord_threshold_stream_order = 3)
     
@@ -168,7 +168,7 @@ def plot_glim_with_basins(axs, DEM_path, DEM_file, location_name, save_path, hs_
         count_file_list+=1
 
 
-
+    breakpoint()
     print('I am about to go into the glim function')
     norm, cmap, labels, dem_mask, glim_processed = plot_glim_data(location_name, DEM_path, DEM_file)
     print('I am going to plot the glim data')
@@ -232,11 +232,11 @@ def plot_glim_no_basins(axs, DEM_path, DEM_file, location_name, save_path, hs_ra
     axs.get_xaxis().set_visible(True)
     axs.get_yaxis().set_visible(True)
     print('hi I will show plot maybe?')
-    latlon_df = pd.read_csv(save_path+'map_locations_lookup_table.csv')
-    lonW = int(latlon_df[location_name][0])
-    lonE = int(latlon_df[location_name][1])
-    latS = int(latlon_df[location_name][2])
-    latN = int(latlon_df[location_name][3])
+    # latlon_df = pd.read_csv(save_path+'map_locations_lookup_table.csv')
+    # lonW = int(latlon_df[location_name][0])
+    # lonE = int(latlon_df[location_name][1])
+    # latS = int(latlon_df[location_name][2])
+    # latN = int(latlon_df[location_name][3])
     #-13.6927, -69.9541
     # axins = inset_axes(axs, width="30%", height="30%", loc=f'{latlon_df[location_name][4]}', 
     #                 axes_class=cartopy.mpl.geoaxes.GeoAxes,
